@@ -1,11 +1,152 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-</head>
-<body>
-    
-</body>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header class="header">
+      <!-- Контейнер для заголовка -->
+      <div class="header__container">
+        <!-- Логотип -->
+        <div class="logo">
+          <!-- Ссылка на главную страницу -->
+          <a href="#" class="logo__link">Robin.W</a>
+        </div>
+        <!-- Навигационное меню -->
+        <nav>
+          <ul class="menu">
+            <!-- Пункт меню -->
+            <li class="menu_list">
+              <!-- Ссылка на раздел "Experience" -->
+              <a href="#" class="menu_link">Experience</a>
+            </li>
+            <!-- Пункт меню -->
+            <li class="menu_list">
+              <!-- Ссылка на раздел "Work" -->
+              <a href="#" class="menu_link">Work</a>
+            </li>
+            <!-- Пункт меню -->
+            <li class="menu_list">
+              <!-- Ссылка на раздел "Photography" -->
+              <a href="#" class="menu_link">Photography</a>
+            </li>
+          </ul>
+          <!-- Ссылка, стилизованная как кнопка "Contact" -->
+          <a href="#" class="header_btn_link">
+            <button class="header_btn">Contact</button>
+          </a>
+        </nav>
+      </div>
+    </header>
+    <section class="section1">
+      <div class="section1__container">
+        <!-- Левый блок с изображением -->
+        <div class="section1_left">
+          <img
+            class="section1__image"
+            src="images/images.jpg"
+            alt="Описание изображения"
+          />
+        </div>
+        <!-- Правый блок с текстовой информацией -->
+        <div class="section1_right">
+          <!-- Заголовок правого блока -->
+          <h1 class="section1_right_title">
+            I’m Robin Williams. A Product Designer based in Italy.
+          </h1>
+          <!-- Текст правого блока -->
+          <p class="section1_right_text">
+            I’m probably the most passionate designer you will ever get to work
+            with. If you have a great project that needs some amazing skills,
+            I’m your guy.
+          </p>
+        </div>
+      </div>
+    </section>
+    <section class="section2">
+      <div class="section2__container">
+        <!-- Заголовок раздела -->
+        <div class="section2_top">
+          <h3 class="section2_title1">Опыт работы</h3>
+          <h1 class="section2_title2">
+            Я Робин Уильямс. Продуктовый дизайнер из Италии.
+          </h1>
+        </div>
+        <!-- Карточки опыта работы -->
+        <div class="section2_cards">
+          <!-- Карточка 1 -->
+          <div class="section2_card">
+            <h1 class="section2_card_number">01</h1>
+            <!-- Компания и должность -->
+            <div style="display: flex; align-items: center; color: #8491a0">
+              <h2 class="card_title">
+                <span class="section2_platform1">Google</span>, Interaction
+                Designer
+              </h2>
+            </div>
+            <!-- Описание работы -->
+            <p class="card_text">
+              В настоящее время я являюсь ведущим дизайнером в команде по
+              взаимодействию для Google Play.
+            </p>
+          </div>
+          <!-- Карточка 2 -->
+          <div class="section2_card">
+            <h1 class="section2_card_number">02</h1>
+            <!-- Компания и должность -->
+            <div style="display: flex; align-items: center; color: #8491a0">
+              <h2 class="card_title">
+                <span class="section2_platform2">Facebook</span>, Product
+                Designer
+              </h2>
+            </div>
+            <!-- Описание работы -->
+            <p class="card_text">
+              Я работал над широким спектром внутренних инструментов для
+              Facebook в течение последних 6 лет.
+            </p>
+          </div>
+          <!-- Карточка 3 -->
+          <div class="section2_card">
+            <h1 class="section2_card_number">03</h1>
+            <!-- Компания и должность -->
+            <div style="display: flex; align-items: center; color: #8491a0">
+              <h2 class="card_title">
+                <span class="section2_platform3">Dribbble</span>, Graphic
+                Designer
+              </h2>
+            </div>
+            <!-- Описание работы -->
+            <p class="card_text">
+              Я начал свою карьеру дизайнера на Dribbble. Я был ответственным за
+              создание иллюстраций для платформы.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="section3">
+        <div class="section3__container">
+            <!-- Левая часть раздела -->
+            <div class="section3_left">
+                <h1>Philosophy & values</h1>
+                <p>
+                    I think everyone wants the same thing - relationship with humanity,
+                    peace with the metaphysical, and experience with the universe. I try
+                    to grasp these things with my values: authenticity, creativity, &
+                    hospitality.
+                </p>
+                <!-- Ссылка на дополнительную информацию -->
+                <a href="">More about me</a>
+            </div>
+            <!-- Правая часть раздела (изображение) -->
+            <div class="section3_right">
+                <img src="images/img2.png" alt="image">
+            </div>
+        </div>
+    </section>
+  </body>
 </html>
