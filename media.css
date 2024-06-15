@@ -1,6 +1,6 @@
-@media (min-width: 768px) {
+@media (max-width: 768px) {
 	.section1_right_title{
-		color: red;
-	 font-size: 30px;
+	 font-size: 10px;
+	 font-weight: 400;
 	} 
 	}

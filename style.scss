@@ -25,6 +25,7 @@
 .header {
 	height: 88px;
 	background-color: #000;
+
 	.header__container {
 		color: #fff;
 		width: 100%;
@@ -33,6 +34,10 @@
 		align-items: center;
 		justify-content: space-between;
 		padding: 40px;
+		@media (max-width:768px) {
+			justify-content: center;
+			gap: 130px;
+		}
 		.logo {
 			display: flex;
 			justify-content: center;
@@ -56,10 +61,92 @@
 			display: flex;
 			align-items: center;
 			justify-content: center;
-			.menu {
+			
+			.burger__container{
+				display: none;
+				width: 130px;
+				z-index: 100;
+				@media (max-width:600px) {
+				
+					display: flex;
+				}
+
+				align-items: center;
+				justify-content: center;
+				padding: 30px;
+				.burger_menu{
+					width:60px;
+					height: 60px;
+					background: #000;
+					border-radius: 50%;
+					transition: 1s;
+					display: none;
+					@media (max-width:600px) {
+				
+						display: flex;
+					}
+					cursor: pointer;
+					
+					.menu_icon{
+						width: 60px;
+						height: 60px;
+						border-radius: 50%;
+					}
+				}
+				.burger_main{
+					width: 130px;
+					height: 200px;
+					background-color: #000;
+					border-radius:0 0 10px 10px;
+					padding-bottom: 9px;
+
+					display: none;
+					flex-direction: column;
+					align-items: center;
+					justify-content: space-between;
+					.burger_list{
+						width: 100%;
+						height: 60px;
+						display: flex;
+						transition: 1s;
+						justify-content: center;
+						align-items: center;
+						color: grey;
+						border-bottom: 1px solid grey;
+						.burger_link{
+							color: #fff;
+
+font-size: 16px;
+font-weight: 400;
+line-height: 24px;
+
+						}
+					}
+					.burger_list:hover{
+						border: none;
+						color: red;
+						border-bottom: 1px solid red;
+						transition: 1s;
+					}
+				}
+				.burger_menu:hover{
+					background: red;
+					transition: 1s;
+					
+				}
+			}
+				.menu {
+					@media (max-width:600px) {
+				
+						display: none;
+					}
+		
 				display: flex;
 				gap: 100px;
 				padding: 30px;
+				@media (max-width:768px) {
+					gap: 10px;
+				}
 				.menu_link {
 					color: #fff;
 
@@ -76,6 +163,10 @@
 			}
 		}
 		.header_btn {
+			@media (max-width:600px) {
+				
+				display: none;
+			}
 			width: 100px;
 			height: 88px;
 			background: #5221e6;
@@ -105,15 +196,20 @@
 	background-color: #181823;
 	width: 100%;
 	height: 914px;
+	@media (max-width: 768px) {
+		height: 714px;
+	}
 	.section1__container {
 		width: 100%;
 		height: 100vh;
+		gap: 50px;
 		display: flex;
 		align-items: center;
 		justify-content: center;
 		.section1__image {
 			width: 450px;
 			height: 450px;
+			padding-left: 40px;
 			object-fit: cover;
 			border-radius: 20px;
 		}
@@ -121,10 +217,10 @@
 			display: flex;
 			align-items: center;
 			justify-content: center;
-			padding: 20px;
+		
 		}
 		.section1_right {
-			padding: 150px;
+			padding-right: 100px;
 			.section1_right_title {
 				font-size: 77px;
 				margin-bottom: 10px;
@@ -132,11 +228,10 @@
 				color: #fff;
 				line-height: 93.84px;
 				text-align: left;
-				@media (max-width: 768px) {
-				.section1_right_title{
+				@media (max-width: 806px) {
 
+					line-height: normal;
 					font-size: 30px;
-				}	
 				}
 			}
 			.section1_right_text {
@@ -147,7 +242,7 @@
 }
 .section2 {
 	width: 100%;
-	height: 715px;
+	height: auto;
 	background-color: #000;
 	.section2__container {
 		width: 100%;
@@ -157,7 +252,14 @@
 		gap: 200px;
 		flex-direction: column;
 		align-items: start;
+		
+		@media (max-width: 768px) {
+			align-items: center;
+		}
 		justify-content: center;
+		@media (max-width: 768px) {
+			align-items: center;
+		}
 		.section2_title1 {
 			width: 158px;
 			height: 24px;
@@ -165,6 +267,12 @@
 			font-size: 20px;
 			font-weight: 700;
 			line-height: 24px;
+			@media (max-width: 700px) {
+				text-align: center;
+			}
+			@media (max-width: 638px) {
+				display: none;
+			}
 		}
 		.section2_title2 {
 			width: 690px;
@@ -173,10 +281,21 @@
 			font-size: 55px;
 			font-weight: 700;
 			line-height: 66.17px;
+			@media (max-width: 768px) {
+			font-size: 45px;
+			line-height: normal;
+			}
+			@media (max-width: 700px) {
+				text-align: center;
+			}
 		}
 		.section2_cards {
 			display: flex;
 			gap: 70px;
+			@media (max-width: 768px) {
+
+				flex-direction: column;
+			}
 			.section2_card {
 				display: flex;
 				flex-direction: column;
@@ -214,25 +333,45 @@
 		align-items: center;
 		justify-content: space-between;
 		gap: 150px;
+		@media (max-width: 768px) {
+			justify-content: center;		
+		}
 		padding: 50px;
 		.section3_right {
+			width: 50%;
 			display: flex;
 			justify-content: center;
 			align-items: center;
+		
 		}
 		.section3_right > img {
 			object-fit: cover;
+			@media (max-width: 768px) {
+					width: 275px;		
+					height: 500px;		
+			}
 		}
 		.section3_left {
 			display: flex;
+			width: 50%;
 			flex-direction: column;
 			align-items: flex-start;
 			gap: 50px;
+			@media (max-width: 768px) {
+				padding-left: 40px;	
+				}
 		}
 		.section3_left > h1 {
 			width: 529px;
 			height: 66px;
-
+			@media (max-width: 768px) {
+			width: 300px;	
+			@media (max-width: 768px) {
+		
+				line-height: normal;	
+				font-size: 30px;
+				}
+			}
 			font-size: 55px;
 			font-weight: 700;
 			line-height: 66.17px;
@@ -242,7 +381,10 @@
 			width: 576px;
 			height: 108px;
 			color: #5b6876;
-
+			@media (max-width: 768px) {
+				padding-right: 20px;
+				width: 400px;	
+				}
 			font-size: 18px;
 			font-weight: 400;
 			line-height: 27px;
@@ -272,7 +414,9 @@
 		gap: 159px;
 		display: flex;
 		align-items: center;
-
+		@media (max-width: 768px) {
+			flex-direction: column;
+			}
 		justify-content: space-between;
 		.section4_left {
 			width: 516px;
@@ -348,26 +492,43 @@
 		display: flex;
 		width: 100%;
 		height: 100%;
+		@media (max-width: 768px) {
+			flex-wrap: wrap;
+			padding-bottom: 1050px;
+			}
+			
 		justify-content: center;
 		align-items: center;
 	}
 }
 .section6 {
 	width: 100%;
-	height: 1601px;
+	height:auto;
 	background: #000;
+	@media (max-width: 768px) {
+		padding-top: 250px;
+		padding-bottom: 50px;
+		}
 	.section6__container {
 		width: 100%;
 		height: 100%;
 		display: flex;
 		align-items: center;
 		justify-content: center;
+		padding-bottom: 40px;
+		@media (max-width: 768px) {
+				flex-wrap: wrap;
+		}
+		@media (max-width: 638px) {
+			padding-top:300px;
+			}
 		.section6_left {
 			width: 50%;
 			padding: 30px;
 			gap: 50px;
 			display: flex;
 			flex-direction: column;
+			align-items: center;
 			.section6_left_title {
 				padding: 50px;
 			}
@@ -381,12 +542,15 @@
 			}
 			.section6_left_title > h1 {
 				//styleName: Heading - 55px;
-				font-family: Sen;
+		
 				font-size: 55px;
 				color: #fff;
 				font-weight: 700;
 				line-height: 66.17px;
 				text-align: left;
+				@media (max-width: 768px) {
+					width: 300px;
+					}
 			}
 			.section6_left_cards {
 				.card {
@@ -498,9 +662,11 @@
 	align-items: center;
 	.section7__container {
 		display: flex;
+		justify-content: space-between;
 		.section7_left {
-			width: 720px;
-			height: 600px;
+			width:60%;
+			height: 100%;
+			padding: 45px;
 			display: flex;
 			justify-content: center;
 			align-items: center;
@@ -522,8 +688,16 @@
 				color: #000;
 			}
 		}
-		.section7_right {
+		.section7_right{
+			width: 40%;
 			height: 100%;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+		}
+		.section7_right>img {
+			height: 600px;
+			width: 263px;
 		}
 	}
 }
@@ -540,6 +714,11 @@
 		padding: 150px;
 		.section8_img {
 			object-fit: cover;
+			@media (max-width: 768px) {
+				width: 500px;
+				height: 500px;
+	
+				}
 		}
 		.section8_title {
 			color: #fff;
@@ -575,7 +754,10 @@
 		display: flex;
 		justify-content: space-between;
 		padding: 50px;
+		@media (max-width: 768px) {
+			flex-wrap: wrap;
 
+			}
 		.section9_right {
 			display: flex;
 			justify-content: center;
@@ -589,6 +771,11 @@
 					width: 636px;
 					height: 660px;
 					gap: 50px;
+					@media (max-width: 768px) {
+						width: 400px;
+						height: 800px;
+			
+						}
 					border: 1px solid #5b6876;
 					border-radius: 5px;
 					overflow: hidden;
@@ -724,6 +911,10 @@
 		justify-content: center;
 		gap: 150px;
 		padding: 150px;
+		@media (max-width: 768px) {
+			flex-wrap: wrap;
+
+			}
 	.section11_left{
 		gap: 30px;
 		.section11_titel{
@@ -823,11 +1014,17 @@ padding: 15px;
 		}
 		.footer_right{
 			padding:20px;
+			@media (max-width: 768px) {
+				padding: 0;
+				}
 			.footer_nav{
 				padding: 10px;
 				.footer_menu{
 					display: flex;
 					gap: 150px;
+					@media (max-width: 768px) {
+						gap: 30px;
+						}
 					.footer_link{
 					color: #fff;
 font-size: 20px;
