@@ -221,6 +221,7 @@ body {
   gap: 50px;
   display: flex;
   align-items: center;
+  padding-top: 150px;
   justify-content: center;
 }
 @media (max-width: 960px) {
