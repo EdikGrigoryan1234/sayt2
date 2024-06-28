@@ -12,6 +12,7 @@
 [class*=__container] {
   max-width: 1440px;
   margin: 0 auto;
+  overflow: hidden;
 }
 
 .header {
@@ -570,7 +571,7 @@
 }
 @media (max-width: 412px) {
   .section4 .section4__container .section4_right .section4_cards {
-    padding-left: 30px;
+    justify-content: center;
   }
 }
 .section4 .section4__container .section4_right .section4_cards .section4_card {
@@ -580,6 +581,11 @@
   left: 952px;
   gap: 0px;
   opacity: 0px;
+}
+@media (max-width: 900px) {
+  .section4 .section4__container .section4_right .section4_cards .section4_card {
+    text-align: center;
+  }
 }
 .section4 .section4__container .section4_right .section4_cards .section4_card .section4_card_titke {
   width: 177px;
@@ -594,6 +600,18 @@
 }
 .section4 .section4__container .section4_right .section4_cards .section4_card .section4_card_text {
   color: #8491a0;
+}
+@media (max-width: 900px) {
+  .section4 .section4__container .section4_right .section4_cards .section4_card .section4_card_text {
+    width: 400px;
+    font-size: 13px;
+  }
+}
+@media (max-width: 900px) {
+  .section4 .section4__container .section4_right .section4_cards .section4_card .section4_card_image {
+    width: 50px;
+    height: 50px;
+  }
 }
 
 .section5 {
@@ -620,12 +638,6 @@
   height: 270vh;
   background: #000;
 }
-@media (max-width: 768px) {
-  .section6 {
-    padding-top: 250px;
-    padding-bottom: 50px;
-  }
-}
 .section6 .section6__container {
   width: 100%;
   height: 100%;
@@ -633,11 +645,7 @@
   align-items: center;
   justify-content: space-between;
   padding-bottom: 40px;
-}
-@media (max-width: 768px) {
-  .section6 .section6__container {
-    flex-wrap: wrap;
-  }
+  gap: 40px;
 }
 @media (max-width: 638px) {
   .section6 .section6__container {
@@ -652,6 +660,11 @@
   flex-direction: column;
   align-items: center;
   justify-content: space-between;
+}
+@media (max-width: 900px) {
+  .section6 .section6__container .section6_left {
+    display: none;
+  }
 }
 .section6 .section6__container .section6_left .section6_left_title {
   margin-top: 0;
@@ -730,14 +743,10 @@
 }
 .section6 .section6__container .section6_right {
   width: 100%;
+  height: auto;
   display: flex;
   flex-direction: column;
   gap: 150px;
-}
-@media (max-width: 472px) {
-  .section6 .section6__container .section6_right {
-    display: none;
-  }
 }
 .section6 .section6__container .section6_right .card {
   padding: 30px;
@@ -832,11 +841,6 @@
   flex-direction: column;
   gap: 40px;
 }
-@media (max-width: 412px) {
-  .section7 .section7__container .section7_left {
-    margin-left: 120px;
-  }
-}
 .section7 .section7__container .section7_left .section7_left_title {
   font-size: 80px;
   font-weight: 700;
@@ -900,6 +904,11 @@
   gap: 40px;
   padding: 150px;
 }
+@media (max-width: 900px) {
+  .section8 .section8__container {
+    padding: 0;
+  }
+}
 .section8 .section8__container .section8_img {
   -o-object-fit: cover;
      object-fit: cover;
@@ -931,11 +940,12 @@
   line-height: 27px;
   text-align: left;
 }
-@media (max-width: 472px) {
+@media (max-width: 900px) {
   .section8 .section8__container .section8_text {
     width: 400px;
     padding-left: 10px;
     text-align: center;
+    padding-left: 20px;
   }
 }
 .section8 .section8__container .section8_link {
@@ -982,6 +992,11 @@
   padding: 50px;
   gap: 100px;
 }
+@media (max-width: 900px) {
+  .section9 .section9__container .section9_right .section9_cards {
+    padding: 0;
+  }
+}
 .section9 .section9__container .section9_right .section9_cards .section9_card {
   width: 636px;
   height: 660px;
@@ -990,10 +1005,10 @@
   border-radius: 5px;
   overflow: hidden;
 }
-@media (max-width: 768px) {
+@media (max-width: 900px) {
   .section9 .section9__container .section9_right .section9_cards .section9_card {
-    width: 400px;
-    height: 800px;
+    width: 250px;
+    height: auto;
   }
 }
 .section9 .section9__container .section9_right .section9_cards .section9_card .section9_card_img {
@@ -1033,6 +1048,13 @@
   line-height: 66.17px;
   text-align: left;
 }
+@media (max-width: 900px) {
+  .section9 .section9__container .section9_left .section9_title {
+    width: 200px;
+    font-size: 35px;
+    line-height: normal;
+  }
+}
 .section9 .section9__container .section9_left .section9_text {
   width: 588px;
   margin: 50px;
@@ -1042,6 +1064,13 @@
   font-weight: 400;
   line-height: 27px;
   text-align: left;
+}
+@media (max-width: 900px) {
+  .section9 .section9__container .section9_left .section9_text {
+    width: 200px;
+    font-size: 15px;
+    line-height: normal;
+  }
 }
 .section9 .section9__container .section9_left .section9_link {
   text-decoration: underline;
